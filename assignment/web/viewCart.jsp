@@ -4,6 +4,8 @@
     Author     : jerry
 --%>
 
+<%@page import="dto.Plant"%>
+<%@page import="dao.PlantDAO"%>
 <%@page import="java.util.Date"%>
 <%@page import="java.util.Set"%>
 <%@page import="java.util.HashMap"%>
@@ -33,11 +35,14 @@
             <table width="100%" class="shopping">
                 <tr>
                     <td>Product id</td>
+                    <td>Image</td>
+                    <td>Price</td>
                     <td>Quantity</td>
                     <td>Action</td>
                 </tr>
                 <%
                     HashMap<String, Integer> cart = (HashMap) session.getAttribute("cart");
+                    int money = 0;
                     if (cart != null) {
                         Set<String> pids = cart.keySet();
                         if (pids.size() == 0) {
@@ -49,12 +54,20 @@
                 } else {
                     for (String pid : pids) {
                         int quantity = cart.get(pid);
+                        Plant p = PlantDAO.getPlant(Integer.parseInt(pid));
+                        money += quantity * p.getPrice();
                 %>
                 <form action="mainController" method="post">
                     <tr>
                         <td>
                             <input type="hidden" value="<%= pid%>" name="pid"/>
                             <a href="mainController?action=getplant&pid=<%=pid%>"><%=pid%></a>
+                        </td>
+                        <td>
+                            <img src="<%= p.getImgpath()%>"/>
+                        </td>
+                        <td>
+                            <%= p.getPrice()%>
                         </td>
                         <td>
                             <input type="number" value="<%= quantity%>" name="quantity"/>
@@ -77,7 +90,7 @@
                     }
                 %>
                 <tr>
-                    <td>Total money: </td>
+                    <td>Total money: <%= money%></td>
                 </tr>
                 <tr>
                     <td>

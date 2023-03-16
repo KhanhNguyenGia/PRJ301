@@ -58,14 +58,26 @@
             <%
                 String error = (String) request.getAttribute("error");
                 ArrayList<Order> list = OrderDAO.getOrders(email);
-                String[] status = {"", "processing", "completed", "canceled"};
+                String[] status = {"", "processing", "completed", "cancelled"};
+                String filter = (String) request.getParameter("filter");
                 if (error != null && !error.isEmpty()) {
             %>
             <h2>${error}</h2>
             <%
                 }
                 if (list != null && !list.isEmpty()) {
+                    ArrayList<Order> filtered = new ArrayList<>();
                     for (Order o : list) {
+                        if (filter == null || filter.isEmpty() || status[o.getStatus()].equals(filter)) {
+                            filtered.add(o);
+                        }
+                    }
+                    if (filtered.isEmpty()) {
+            %>
+            <h2>List is empty</h2>
+            <%
+            } else {
+                for (Order o : filtered) {
             %>
             <table class="order">
                 <tr>
@@ -93,6 +105,7 @@
                 </tr>
             </table>
             <%
+                    }
                 }
             } else {
             %>

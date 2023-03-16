@@ -43,7 +43,7 @@
             }
         %>
         <c:import url="header_loginedAdmin.jsp"/>
-        <form action="mainController" method="post">
+        <form action="mainController" method="get">
             <input type="text" name="txtsearch"/>
             <input type="submit" value="searchaccount" name="action"/>
         </form>

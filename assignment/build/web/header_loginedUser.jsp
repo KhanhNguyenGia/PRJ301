@@ -16,9 +16,9 @@
             <ul>
                 <li><a href="index.jsp">Home</a></li>
                 <li><a href="changeProfile.jsp">Change profile</a></li>
-                <li><a href="">Completed orders</a></li>
-                <li><a href="">Canceled orders</a></li>
-                <li><a href="">Processing orders</a></li>
+                <li><a href="personalPage.jsp?filter=completed">Completed orders</a></li>
+                <li><a href="personalPage.jsp?filter=cancelled">Canceled orders</a></li>
+                <li><a href="personalPage.jsp?filter=processing">Processing orders</a></li>
                 <li>from <input type="date" name="from"> to <input type="date" name="to"><input type="submit" value="search"></li>
             </ul>
         </nav>

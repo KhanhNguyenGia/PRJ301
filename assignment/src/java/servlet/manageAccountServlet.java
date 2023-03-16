@@ -34,7 +34,14 @@ public class manageAccountServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            ArrayList<Account> list = AccountDAO.getAccounts();
+            ArrayList<Account> temp = AccountDAO.getAccounts();
+            String search = (String) request.getParameter("txtsearch");
+            ArrayList<Account> list= new ArrayList<>();
+            for (Account acc : temp) {
+                if (search == null || search.isEmpty() || acc.getEmail().contains(search)) {
+                    list.add(acc);
+                }
+            }
             request.setAttribute("accountList", list);
             request.getRequestDispatcher("ManageAccount.jsp").forward(request, response);
         }
