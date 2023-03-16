@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/changeProfile.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/src/java/servlet/loginServlet.java</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/src/java/dao/OrderDetail.java</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/login.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/header_loginedAdmin.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/src/java/servlet/updateOrderStatusServlet.java</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/src/java/dao/OrderDAO.java</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/viewCart.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/src/java/servlet/saveShoppingCartServlet.java</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/personalPage.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/src/java/servlet/mainController.java</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/src/java/dao/AccountDAO.java</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/index.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/header_loginedUser.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/AdminIndex.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/registration.jsp</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/src/java/servlet/updateCartServlet.java</file>
+            <file>file:/E:/Codes/java/PRJ301/assignment/web/ManageAccount.jsp</file>
+        </group>
+    </open-files>
+</project-private>
